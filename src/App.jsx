@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 // ─────────────────────────────────────────────
 // 🔧 הגדרות – החלף בערכים שלך מ-Google Cloud Console
 // ─────────────────────────────────────────────
-const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "186698196698-6ki6g5tir0cbvmcmae1daocbcikgc194.apps.googleusercontent.com";
 const CALENDAR_SCOPES = "https://www.googleapis.com/auth/calendar";
 
 const SECTIONS = ["notes", "calendar", "expenses", "shopping", "chores", "wishboard"];
