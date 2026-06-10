@@ -17,31 +17,31 @@ const SECTION_META = {
 };
 
 const SAMPLE_NOTES = [
-  { id: 1, title: "סיסמת ה-WiFi",  content: "HomeSweet2024!",        author: "ראיה", color: "#fef3c7", date: "היום" },
-  { id: 2, title: "מספר השוכר",    content: "משה לוי: 050-1234567",  author: "דן",   color: "#dbeafe", date: "אתמול" },
-  { id: 3, title: "זמני אשפה",     content: "ראשון ורביעי בבוקר",    author: "ראיה", color: "#dcfce7", date: "שבוע שעבר" },
+  { id: 1, title: "סיסמת ה-WiFi",  content: "HomeSweet2024!",        author: "שירה", color: "#fef3c7", date: "היום" },
+  { id: 2, title: "מספר השוכר",    content: "משה לוי: 050-1234567",  author: "גל",   color: "#dbeafe", date: "אתמול" },
+  { id: 3, title: "זמני אשפה",     content: "ראשון ורביעי בבוקר",    author: "שירה", color: "#dcfce7", date: "שבוע שעבר" },
 ];
 const SAMPLE_EXPENSES = [
-  { id: 1, title: "שכירות יוני", amount: 4200, paidBy: "דן",   split: true,  date: "1.6", category: "דיור" },
-  { id: 2, title: "סופר",        amount: 380,  paidBy: "ראיה", split: true,  date: "5.6", category: "אוכל" },
-  { id: 3, title: "חשמל",        amount: 290,  paidBy: "דן",   split: true,  date: "3.6", category: "חשבונות" },
-  { id: 4, title: "נטפליקס",     amount: 55,   paidBy: "ראיה", split: true,  date: "4.6", category: "בידור" },
-  { id: 5, title: "תרופות",      amount: 120,  paidBy: "ראיה", split: false, date: "7.6", category: "בריאות" },
+  { id: 1, title: "שכירות יוני", amount: 4200, paidBy: "גל",   split: true,  date: "1.6", category: "דיור" },
+  { id: 2, title: "סופר",        amount: 380,  paidBy: "שירה", split: true,  date: "5.6", category: "אוכל" },
+  { id: 3, title: "חשמל",        amount: 290,  paidBy: "גל",   split: true,  date: "3.6", category: "חשבונות" },
+  { id: 4, title: "נטפליקס",     amount: 55,   paidBy: "שירה", split: true,  date: "4.6", category: "בידור" },
+  { id: 5, title: "תרופות",      amount: 120,  paidBy: "שירה", split: false, date: "7.6", category: "בריאות" },
 ];
 const SAMPLE_SHOPPING = [
-  { id: 1, text: "חלב",    done: false, addedBy: "ראיה" },
-  { id: 2, text: "לחם",    done: true,  addedBy: "דן" },
-  { id: 3, text: "ביצים",  done: false, addedBy: "ראיה" },
-  { id: 4, text: "שמפו",   done: false, addedBy: "דן" },
-  { id: 5, text: "קפה",    done: true,  addedBy: "ראיה" },
-  { id: 6, text: "אבוקדו", done: false, addedBy: "דן" },
+  { id: 1, text: "חלב",    done: false, addedBy: "שירה" },
+  { id: 2, text: "לחם",    done: true,  addedBy: "גל" },
+  { id: 3, text: "ביצים",  done: false, addedBy: "שירה" },
+  { id: 4, text: "שמפו",   done: false, addedBy: "גל" },
+  { id: 5, text: "קפה",    done: true,  addedBy: "שירה" },
+  { id: 6, text: "אבוקדו", done: false, addedBy: "גל" },
 ];
 const SAMPLE_CHORES = [
-  { id: 1, task: "שטיפת כלים",  assignee: "דן",    frequency: "יומי",             done: false, lastDone: "אתמול" },
-  { id: 2, task: "ניקיון שבועי", assignee: "ראיה",  frequency: "שבועי",             done: false, lastDone: "שבוע שעבר" },
+  { id: 1, task: "שטיפת כלים",  assignee: "גל",    frequency: "יומי",             done: false, lastDone: "אתמול" },
+  { id: 2, task: "ניקיון שבועי", assignee: "שירה",  frequency: "שבועי",             done: false, lastDone: "שבוע שעבר" },
   { id: 3, task: "כביסה",       assignee: "שניהם", frequency: "פעמיים בשבוע",     done: true,  lastDone: "היום" },
-  { id: 4, task: "אשפה",        assignee: "דן",    frequency: "פעמיים בשבוע",     done: false, lastDone: "3 ימים" },
-  { id: 5, task: "קניות",       assignee: "ראיה",  frequency: "שבועי",             done: false, lastDone: "שבוע שעבר" },
+  { id: 4, task: "אשפה",        assignee: "גל",    frequency: "פעמיים בשבוע",     done: false, lastDone: "3 ימים" },
+  { id: 5, task: "קניות",       assignee: "שירה",  frequency: "שבועי",             done: false, lastDone: "שבוע שעבר" },
 ];
 const SAMPLE_WISHBOARD = [
   { id: 1, title: "טיול לאיטליה", emoji: "🇮🇹", priority: "high",   notes: "פלורנס ורומא, קיץ 2025",  color: "#fef3c7" },
@@ -119,7 +119,7 @@ export default function App() {
 
   const [showAdd, setShowAdd]       = useState(false);
   const [newItem, setNewItem]       = useState({});
-  const [editingNote, setEditingNote] = useState(null); // note object being edited
+  const [editing, setEditing]       = useState(null); // { section, item }
   const [greeting, setGreeting]     = useState("");
 
   useEffect(() => {
@@ -279,15 +279,24 @@ export default function App() {
     }
   };
 
-  const saveNote = () => {
-    setNotes(p => p.map(n => n.id === editingNote.id ? { ...editingNote } : n));
-    setEditingNote(null);
+  const saveEdit = () => {
+    const { section, item } = editing;
+    if (section==="notes")     setNotes(p=>p.map(n=>n.id===item.id?item:n));
+    if (section==="calendar")  setEvents(p=>p.map(e=>e.id===item.id?item:e));
+    if (section==="expenses")  setExpenses(p=>p.map(e=>e.id===item.id?item:e));
+    if (section==="shopping")  setShopping(p=>p.map(i=>i.id===item.id?item:i));
+    if (section==="chores")    setChores(p=>p.map(c=>c.id===item.id?item:c));
+    if (section==="wishboard") setWishboard(p=>p.map(w=>w.id===item.id?item:w));
+    setEditing(null);
   };
+
+  const updateEditing = (field, value) =>
+    setEditing(p => ({ ...p, item: { ...p.item, [field]: value } }));
 
   // ── derived expense stats ──
   const totalExpenses  = expenses.reduce((s,e)=>s+e.amount,0);
-  const danPaid   = expenses.filter(e=>e.paidBy==="דן"  &&e.split).reduce((s,e)=>s+e.amount/2,0);
-  const raiyaPaid = expenses.filter(e=>e.paidBy==="ראיה"&&e.split).reduce((s,e)=>s+e.amount/2,0);
+  const danPaid   = expenses.filter(e=>e.paidBy==="גל"  &&e.split).reduce((s,e)=>s+e.amount/2,0);
+  const raiyaPaid = expenses.filter(e=>e.paidBy==="שירה"&&e.split).reduce((s,e)=>s+e.amount/2,0);
   const balance   = danPaid - raiyaPaid;
 
   // ── Google Calendar status banner ──
@@ -381,7 +390,7 @@ export default function App() {
           <div>
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
               {notes.map(n=>(
-                <div key={n.id} onClick={()=>setEditingNote({...n})} style={{background:n.color,borderRadius:16,padding:14,position:"relative",boxShadow:"0 2px 12px rgba(0,0,0,0.08)",minHeight:100,cursor:"pointer",transition:"transform 0.15s, box-shadow 0.15s"}}
+                <div key={n.id} onClick={()=>setEditing({section:"notes",item:{...n}})} style={{background:n.color,borderRadius:16,padding:14,position:"relative",boxShadow:"0 2px 12px rgba(0,0,0,0.08)",minHeight:100,cursor:"pointer",transition:"transform 0.15s,box-shadow 0.15s"}}
                   onMouseEnter={e=>{e.currentTarget.style.transform="scale(1.02)";e.currentTarget.style.boxShadow="0 6px 20px rgba(0,0,0,0.13)"}}
                   onMouseLeave={e=>{e.currentTarget.style.transform="scale(1)";e.currentTarget.style.boxShadow="0 2px 12px rgba(0,0,0,0.08)"}}>
                   <button onClick={e=>{e.stopPropagation();deleteItem("notes",n.id)}} style={{position:"absolute",top:8,left:8,background:"rgba(0,0,0,0.1)",border:"none",borderRadius:"50%",width:22,height:22,cursor:"pointer",fontSize:11,display:"flex",alignItems:"center",justifyContent:"center"}}>×</button>
@@ -394,31 +403,6 @@ export default function App() {
                 </div>
               ))}
             </div>
-
-            {/* Edit note modal */}
-            {editingNote && (
-              <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.4)",display:"flex",alignItems:"flex-end",justifyContent:"center",zIndex:200,backdropFilter:"blur(4px)"}} onClick={()=>setEditingNote(null)}>
-                <div style={{background:"white",borderRadius:"24px 24px 0 0",padding:"24px 20px 36px",width:"100%",maxWidth:480}} onClick={e=>e.stopPropagation()}>
-                  <div style={{textAlign:"center",marginBottom:20}}>
-                    <div style={{fontSize:24}}>✏️</div>
-                    <h3 style={{margin:"8px 0 0",fontSize:18,fontWeight:700}}>עריכת פתק</h3>
-                  </div>
-                  <div style={{display:"flex",flexDirection:"column",gap:12}}>
-                    <input value={editingNote.title} onChange={e=>setEditingNote(p=>({...p,title:e.target.value}))} placeholder="כותרת" style={inputStyle}/>
-                    <textarea value={editingNote.content} onChange={e=>setEditingNote(p=>({...p,content:e.target.value}))} placeholder="תוכן..." style={{...inputStyle,minHeight:100,resize:"none"}}/>
-                    <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
-                      {["#fef3c7","#dbeafe","#dcfce7","#fce7f3","#f3e8ff","#ffedd5"].map(c=>(
-                        <div key={c} onClick={()=>setEditingNote(p=>({...p,color:c}))} style={{width:32,height:32,borderRadius:"50%",background:c,cursor:"pointer",border:editingNote.color===c?"3px solid #555":"3px solid transparent",transition:"border 0.15s"}}/>
-                      ))}
-                    </div>
-                  </div>
-                  <div style={{display:"flex",gap:10,marginTop:20}}>
-                    <button onClick={()=>setEditingNote(null)} style={{flex:1,background:"#f5f5f5",color:"#666",border:"none",borderRadius:16,padding:"14px",fontSize:15,fontWeight:600,cursor:"pointer",fontFamily:"inherit"}}>ביטול</button>
-                    <button onClick={saveNote} style={{flex:2,background:"linear-gradient(135deg,#e8a87c,#e8a87caa)",color:"white",border:"none",borderRadius:16,padding:"14px",fontSize:15,fontWeight:700,cursor:"pointer",fontFamily:"inherit"}}>💾 שמור</button>
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         )}
 
@@ -443,6 +427,7 @@ export default function App() {
                     <div style={{fontWeight:700,fontSize:15,color:"#333"}}>{e.title}</div>
                     <div style={{fontSize:12,color:"#888",marginTop:2}}>{e.time} · {e.who} {e.googleId ? "🗓" : ""}</div>
                   </div>
+                  <button onClick={()=>setEditing({section:"calendar",item:{...e}})} style={{background:"none",border:"none",cursor:"pointer",color:"#bbb",fontSize:15,padding:"4px"}}>✏️</button>
                   <button onClick={()=>deleteItem("calendar",e.id)} style={{background:"none",border:"none",cursor:"pointer",color:"#ccc",fontSize:16}}>×</button>
                 </div>
               ))}
@@ -456,11 +441,11 @@ export default function App() {
             <div style={{background:"linear-gradient(135deg,#667eea 0%,#764ba2 100%)",borderRadius:20,padding:20,color:"white",marginBottom:16}}>
               <div style={{fontSize:13,opacity:0.8,marginBottom:4}}>יתרה בין שניכם</div>
               <div style={{fontSize:24,fontWeight:800}}>
-                {Math.abs(balance)<1 ? "✅ קוי!" : balance>0 ? `ראיה חייבת לדן ₪${Math.abs(balance).toFixed(0)}` : `דן חייב לראיה ₪${Math.abs(balance).toFixed(0)}`}
+                {Math.abs(balance)<1 ? "✅ קוי!" : balance>0 ? `שירה חייבת לגל ₪${Math.abs(balance).toFixed(0)}` : `גל חייב לשירה ₪${Math.abs(balance).toFixed(0)}`}
               </div>
               <div style={{display:"flex",gap:20,marginTop:14}}>
-                <div><div style={{fontSize:11,opacity:0.7}}>דן שילם (חלק)</div><div style={{fontWeight:700}}>₪{danPaid.toFixed(0)}</div></div>
-                <div><div style={{fontSize:11,opacity:0.7}}>ראיה שילמה (חלק)</div><div style={{fontWeight:700}}>₪{raiyaPaid.toFixed(0)}</div></div>
+                <div><div style={{fontSize:11,opacity:0.7}}>גל שילם (חלק)</div><div style={{fontWeight:700}}>₪{danPaid.toFixed(0)}</div></div>
+                <div><div style={{fontSize:11,opacity:0.7}}>שירה שילמה (חלק)</div><div style={{fontWeight:700}}>₪{raiyaPaid.toFixed(0)}</div></div>
               </div>
             </div>
             <div style={{display:"flex",flexDirection:"column",gap:8}}>
@@ -472,6 +457,7 @@ export default function App() {
                     <div style={{fontSize:12,color:"#888"}}>{e.paidBy} · {e.date} {e.split?"· משותף":"· אישי"}</div>
                   </div>
                   <div style={{fontWeight:700,fontSize:16,color:"#5a2d2d"}}>₪{e.amount}</div>
+                  <button onClick={()=>setEditing({section:"expenses",item:{...e}})} style={{background:"none",border:"none",cursor:"pointer",color:"#bbb",fontSize:15,padding:"4px"}}>✏️</button>
                   <button onClick={()=>deleteItem("expenses",e.id)} style={{background:"none",border:"none",cursor:"pointer",color:"#ccc"}}>×</button>
                 </div>
               ))}
@@ -492,6 +478,7 @@ export default function App() {
                 </button>
                 <span style={{flex:1,fontSize:15,color:item.done?"#aaa":"#333",textDecoration:item.done?"line-through":"none"}}>{item.text}</span>
                 <span style={{fontSize:11,color:"#ccc"}}>{item.addedBy}</span>
+                <button onClick={()=>setEditing({section:"shopping",item:{...item}})} style={{background:"none",border:"none",cursor:"pointer",color:"#bbb",fontSize:13,padding:"4px"}}>✏️</button>
                 <button onClick={()=>deleteItem("shopping",item.id)} style={{background:"none",border:"none",cursor:"pointer",color:"#ddd"}}>×</button>
               </div>
             ))}
@@ -510,7 +497,8 @@ export default function App() {
                   <div style={{fontWeight:600,fontSize:15,color:"#333",textDecoration:c.done?"line-through":"none"}}>{c.task}</div>
                   <div style={{fontSize:12,color:"#888",marginTop:2}}>{c.frequency} · בוצע לאחרונה: {c.lastDone}</div>
                 </div>
-                <div style={{background:c.assignee==="שניהם"?"#fef3c7":c.assignee==="דן"?"#dbeafe":"#fce7f3",color:"#666",borderRadius:10,padding:"4px 10px",fontSize:12,fontWeight:600}}>{c.assignee}</div>
+                <div style={{background:c.assignee==="שניהם"?"#fef3c7":c.assignee==="גל"?"#dbeafe":"#fce7f3",color:"#666",borderRadius:10,padding:"4px 10px",fontSize:12,fontWeight:600}}>{c.assignee}</div>
+                <button onClick={()=>setEditing({section:"chores",item:{...c}})} style={{background:"none",border:"none",cursor:"pointer",color:"#bbb",fontSize:15,padding:"4px"}}>✏️</button>
                 <button onClick={()=>deleteItem("chores",c.id)} style={{background:"none",border:"none",cursor:"pointer",color:"#ccc"}}>×</button>
               </div>
             ))}
@@ -525,7 +513,8 @@ export default function App() {
               {wishboard.map(w=>(
                 <div key={w.id} style={{background:w.color,borderRadius:20,padding:16,boxShadow:"0 4px 16px rgba(0,0,0,0.08)",position:"relative",minHeight:140}}>
                   <button onClick={()=>deleteItem("wishboard",w.id)} style={{position:"absolute",top:8,left:8,background:"rgba(0,0,0,0.1)",border:"none",borderRadius:"50%",width:22,height:22,cursor:"pointer",fontSize:11}}>×</button>
-                  <div style={{fontSize:36,textAlign:"center",marginBottom:8}}>{w.emoji}</div>
+                  <button onClick={()=>setEditing({section:"wishboard",item:{...w}})} style={{position:"absolute",top:8,right:8,background:"rgba(0,0,0,0.08)",border:"none",borderRadius:"50%",width:22,height:22,cursor:"pointer",fontSize:11}}>✏️</button>
+                  <div style={{fontSize:36,textAlign:"center",marginBottom:8,marginTop:4}}>{w.emoji}</div>
                   <div style={{fontWeight:700,fontSize:14,color:"#333",textAlign:"center",marginBottom:6}}>{w.title}</div>
                   <div style={{fontSize:11,color:"#666",textAlign:"center",lineHeight:1.4}}>{w.notes}</div>
                   <div style={{marginTop:10,textAlign:"center"}}>
@@ -559,21 +548,21 @@ export default function App() {
                 <input placeholder="תאריך (לדוגמה: 20.6)" value={newItem.date||""} onChange={e=>setNewItem(p=>({...p,date:e.target.value}))} style={inputStyle}/>
                 <input placeholder="שעה (לדוגמה: 18:00)" value={newItem.time||""} onChange={e=>setNewItem(p=>({...p,time:e.target.value}))} style={inputStyle}/>
                 <select value={newItem.who||"שניהם"} onChange={e=>setNewItem(p=>({...p,who:e.target.value}))} style={inputStyle}>
-                  <option>שניהם</option><option>ראיה</option><option>דן</option>
+                  <option>שניהם</option><option>שירה</option><option>גל</option>
                 </select>
               </>}
               {active==="expenses" && <>
                 <input placeholder="תיאור ההוצאה" value={newItem.title||""} onChange={e=>setNewItem(p=>({...p,title:e.target.value}))} style={inputStyle}/>
                 <input placeholder="סכום (₪)" type="number" value={newItem.amount||""} onChange={e=>setNewItem(p=>({...p,amount:e.target.value}))} style={inputStyle}/>
-                <select value={newItem.paidBy||"ראיה"} onChange={e=>setNewItem(p=>({...p,paidBy:e.target.value}))} style={inputStyle}>
-                  <option>ראיה</option><option>דן</option>
+                <select value={newItem.paidBy||"שירה"} onChange={e=>setNewItem(p=>({...p,paidBy:e.target.value}))} style={inputStyle}>
+                  <option>שירה</option><option>גל</option>
                 </select>
               </>}
               {active==="shopping" && <input placeholder="פריט לקנות..." value={newItem.text||""} onChange={e=>setNewItem(p=>({...p,text:e.target.value}))} style={inputStyle}/>}
               {active==="chores" && <>
                 <input placeholder="שם המטלה" value={newItem.task||""} onChange={e=>setNewItem(p=>({...p,task:e.target.value}))} style={inputStyle}/>
                 <select value={newItem.assignee||"שניהם"} onChange={e=>setNewItem(p=>({...p,assignee:e.target.value}))} style={inputStyle}>
-                  <option>שניהם</option><option>ראיה</option><option>דן</option>
+                  <option>שניהם</option><option>שירה</option><option>גל</option>
                 </select>
                 <input placeholder="תדירות (לדוגמה: שבועי)" value={newItem.frequency||""} onChange={e=>setNewItem(p=>({...p,frequency:e.target.value}))} style={inputStyle}/>
               </>}
@@ -586,6 +575,78 @@ export default function App() {
             <button onClick={addItem} style={{marginTop:20,width:"100%",background:`linear-gradient(135deg,${SECTION_META[active].color},${SECTION_META[active].color}aa)`,color:"white",border:"none",borderRadius:16,padding:"14px",fontSize:16,fontWeight:700,cursor:"pointer",fontFamily:"inherit"}}>
               ➕ הוסף
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Edit Modal */}
+      {editing && (
+        <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.4)",display:"flex",alignItems:"flex-end",justifyContent:"center",zIndex:200,backdropFilter:"blur(4px)"}} onClick={()=>setEditing(null)}>
+          <div style={{background:"white",borderRadius:"24px 24px 0 0",padding:"24px 20px 36px",width:"100%",maxWidth:480}} onClick={e=>e.stopPropagation()}>
+            <div style={{textAlign:"center",marginBottom:20}}>
+              <div style={{fontSize:24}}>{SECTION_META[editing.section].emoji}</div>
+              <h3 style={{margin:"8px 0 0",fontSize:18,fontWeight:700}}>עריכת {SECTION_META[editing.section].label}</h3>
+            </div>
+            <div style={{display:"flex",flexDirection:"column",gap:12}}>
+
+              {editing.section==="notes" && <>
+                <input value={editing.item.title} onChange={e=>updateEditing("title",e.target.value)} placeholder="כותרת" style={inputStyle}/>
+                <textarea value={editing.item.content} onChange={e=>updateEditing("content",e.target.value)} placeholder="תוכן..." style={{...inputStyle,minHeight:100,resize:"none"}}/>
+                <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+                  {["#fef3c7","#dbeafe","#dcfce7","#fce7f3","#f3e8ff","#ffedd5"].map(c=>(
+                    <div key={c} onClick={()=>updateEditing("color",c)} style={{width:32,height:32,borderRadius:"50%",background:c,cursor:"pointer",border:editing.item.color===c?"3px solid #555":"3px solid transparent",transition:"border 0.15s"}}/>
+                  ))}
+                </div>
+              </>}
+
+              {editing.section==="calendar" && <>
+                <input value={editing.item.title} onChange={e=>updateEditing("title",e.target.value)} placeholder="שם האירוע" style={inputStyle}/>
+                <input value={editing.item.date} onChange={e=>updateEditing("date",e.target.value)} placeholder="תאריך (לדוגמה: 20.6)" style={inputStyle}/>
+                <input value={editing.item.time} onChange={e=>updateEditing("time",e.target.value)} placeholder="שעה" style={inputStyle}/>
+                <select value={editing.item.who} onChange={e=>updateEditing("who",e.target.value)} style={inputStyle}>
+                  <option>שניהם</option><option>Shira</option><option>Gal</option>
+                </select>
+              </>}
+
+              {editing.section==="expenses" && <>
+                <input value={editing.item.title} onChange={e=>updateEditing("title",e.target.value)} placeholder="תיאור" style={inputStyle}/>
+                <input type="number" value={editing.item.amount} onChange={e=>updateEditing("amount",Number(e.target.value))} placeholder="סכום" style={inputStyle}/>
+                <select value={editing.item.paidBy} onChange={e=>updateEditing("paidBy",e.target.value)} style={inputStyle}>
+                  <option>Shira</option><option>Gal</option>
+                </select>
+                <select value={editing.item.category} onChange={e=>updateEditing("category",e.target.value)} style={inputStyle}>
+                  {Object.keys(EXPENSE_CATEGORIES).map(k=><option key={k}>{k}</option>)}
+                </select>
+              </>}
+
+              {editing.section==="shopping" && <>
+                <input value={editing.item.text} onChange={e=>updateEditing("text",e.target.value)} placeholder="פריט" style={inputStyle}/>
+              </>}
+
+              {editing.section==="chores" && <>
+                <input value={editing.item.task} onChange={e=>updateEditing("task",e.target.value)} placeholder="מטלה" style={inputStyle}/>
+                <select value={editing.item.assignee} onChange={e=>updateEditing("assignee",e.target.value)} style={inputStyle}>
+                  <option>שניהם</option><option>Shira</option><option>Gal</option>
+                </select>
+                <input value={editing.item.frequency} onChange={e=>updateEditing("frequency",e.target.value)} placeholder="תדירות" style={inputStyle}/>
+              </>}
+
+              {editing.section==="wishboard" && <>
+                <input value={editing.item.title} onChange={e=>updateEditing("title",e.target.value)} placeholder="שם החלום" style={inputStyle}/>
+                <input value={editing.item.emoji} onChange={e=>updateEditing("emoji",e.target.value)} placeholder="אימוג׳י" style={inputStyle}/>
+                <textarea value={editing.item.notes} onChange={e=>updateEditing("notes",e.target.value)} placeholder="פרטים" style={{...inputStyle,minHeight:70,resize:"none"}}/>
+                <select value={editing.item.priority} onChange={e=>updateEditing("priority",e.target.value)} style={inputStyle}>
+                  <option value="high">🔥 עדיפות גבוהה</option>
+                  <option value="medium">⭐ בינוני</option>
+                  <option value="low">🌱 בהמשך</option>
+                </select>
+              </>}
+
+            </div>
+            <div style={{display:"flex",gap:10,marginTop:20}}>
+              <button onClick={()=>setEditing(null)} style={{flex:1,background:"#f5f5f5",color:"#666",border:"none",borderRadius:16,padding:"14px",fontSize:15,fontWeight:600,cursor:"pointer",fontFamily:"inherit"}}>ביטול</button>
+              <button onClick={saveEdit} style={{flex:2,background:`linear-gradient(135deg,${SECTION_META[editing.section].color},${SECTION_META[editing.section].color}aa)`,color:"white",border:"none",borderRadius:16,padding:"14px",fontSize:15,fontWeight:700,cursor:"pointer",fontFamily:"inherit"}}>💾 שמור</button>
+            </div>
           </div>
         </div>
       )}
